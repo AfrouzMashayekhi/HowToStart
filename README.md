@@ -15,14 +15,15 @@ https://github.com/kubernetes/component-base in core repo there is imported code
 ## Core code of Kubernetes
 - api: contains openapi and api violation of Kubernetes, openapi used to generate violation rules of all Kubernetes components. and reference Github repo is : https://github.com/kubernetes/kube-openapi/tree/master/pkg/generators/rules
 
-- build
-- cluster
-- cmd path contains cmds(kubelet, kubectl, kube-proxy,..)
-- docs
-- hack
-- logo
-- pkg
-- plugin
-- staging
-- test
-- vendor
+- build, build kubernetes using docker for different OS or golang installtion on your local machine.
+- cluster it's deprecated path that contain cluster config(networking, DNS, nodes, and control plane components)
+- cmd path contains cmds(kubelet, kubectl, kube-proxy,..) base code
+- hack lots of scripts for e2e test verifcation, update and generate other path contents.
+- pkg all go packages that used in kubernetes
+- plugin  ?
+- staging it is a staging area for Kubernetes and all Kubernetes repositories
+- test all the kubernetes test  e2e node, e2e kubeadm, integrations..
+- third_party forked repos that use in kuber? and other third_party repos.
+- translation a workflow for adding translition to Kubernetes componenets
+- vendor ?
+
