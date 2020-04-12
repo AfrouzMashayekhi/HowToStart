@@ -30,3 +30,20 @@ https://github.com/kubernetes/component-base in core repo there is imported code
 In this path you will find everything =))
 First of all I tried to find where is "event" kind so I find staging/src/k8s.io/api/events/v1beta1 it's logical event is a kind so in api repo at events find events/v1beta1 let see what this little black box has
 
+we want to resolve [this issue](https://github.com/kubernetes/kubernetes/issues/89689) so we want `firstTimestamp` field
+so we have 
+```
+type Event struct {
+...
+	DeprecatedFirstTimestamp metav1.Time `json:"deprecatedFirstTimestamp,omitempty" protobuf:"bytes,13,opt,name=deprecatedFirstTimestamp"`
+	// Deprecated field assuring backward compatibility with core.v1 Event type
+	// +optional
+	DeprecatedLastTimestamp metav1.Time `json:"deprecatedLastTimestamp,omitempty" protobuf:"bytes,14,opt,name=deprecatedLastTimestamp"`
+	// Deprecated field assuring backward compatibility with core.v1 Event type
+	// +optional
+	DeprecatedCount int32 `json:"deprecatedCount,omitempty" protobuf:"varint,15,opt,name=deprecatedCount"`
+}
+```
+lets find out where is default-schduler:(
+I found another path which make diffrent events https://github.com/kubernetes/client-go/blob/master/tools/record/event.go
+now what should I do :(
