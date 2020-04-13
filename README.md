@@ -1,5 +1,6 @@
 # HowToStart
 Documentation about how codes build kubernetes<br/>
+First of all install an IDE Goland is a good option, I started with vim so you know I lost =))
 The overall way that things are designed is as follows...<br/>
 There are 2 main github organization<br/>
 - https://github.com/kubernetes/kuberentes
