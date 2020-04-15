@@ -48,3 +48,6 @@ type Event struct {
 lets find out where is default-schduler:(
 I found another path which make diffrent events https://github.com/kubernetes/client-go/blob/master/tools/record/event.go
 now what should I do :(
+
+
+let see some documents a good reference https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.18/
