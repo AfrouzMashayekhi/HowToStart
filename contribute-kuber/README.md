@@ -26,7 +26,6 @@ https://github.com/kubernetes/component-base in core repo there is imported code
 - test all the kubernetes test  e2e node, e2e kubeadm, integrations..
 - third_party forked repos that use in kuber? and other third_party repos.
 - translation a workflow for adding translition to Kubernetes componenets
-- vendor ?
 ### Staging Path
 In this path you will find everything =))
 First of all I tried to find where is "event" kind so I find staging/src/k8s.io/api/events/v1beta1 it's logical event is a kind so in api repo at events find events/v1beta1 let see what this little black box has
