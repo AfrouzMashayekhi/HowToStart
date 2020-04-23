@@ -50,3 +50,8 @@ now what should I do :(
 
 
 let see some documents a good reference https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.18/
+
+
+# Presubmiting tests
+one goood resource is https://www.youtube.com/watch?v=1rwiKDTJILY
+
