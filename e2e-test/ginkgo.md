@@ -34,11 +34,13 @@ The indiviudal Entry calls construct a TableEntry that is passed into DescribeTa
 
 It’s important to understand the life-cycle of the table. The table package is a thin wrapper around Ginkgo’s DSL. DescribeTable generates a single Ginkgo Describe, within this Describe each Entry generates a Ginkgo It. This all happens before the tests run (at “testing tree construction time”). The result is that the table expands into a number of Its (one for each Entry) that are subject to all of Ginkgo’s test-running semantics: Its can be randomized and parallelized across multiple nodes.
 ## Writing custom reporters
-```type Reporter interface {
+```
+type Reporter interface {
     SpecSuiteWillBegin(config config.GinkgoConfigType, summary *types.SuiteSummary)
     BeforeSuiteDidRun(setupSummary *types.SetupSummary)
     SpecWillRun(specSummary *types.SpecSummary)
     SpecDidComplete(specSummary *types.SpecSummary)
     AfterSuiteDidRun(setupSummary *types.SetupSummary)
     SpecSuiteDidEnd(summary *types.SuiteSummary)
-}```
+}
+```
